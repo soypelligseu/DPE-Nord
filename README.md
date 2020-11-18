@@ -1,8 +1,6 @@
 La rénovation énergétique du parc de logements français représente une étape majeure dans la transition énergétique que souhaite opérer la France. A la suite de la convention citoyenne pour le climat, le sujet a d’ailleurs été largement approuvé car les économies potentielles en énergie sont immenses. Ainsi, de nombreuses politiques et subventions se succèdent depuis plusieurs années pour favoriser une réduction de la consommation énergétique des foyers français : la meilleure énergie, c’est celle qu’on ne consomme pas.
 
-Notre souhait initial a été d’observer l’évolution de l’activité de rénovation énergétique des logements à l’échelle des régions françaises. Mais l’absence de données libres d’accès nous a contraint à revoir notre angle.
-
-Nous avons donc fait le choix d’étudier l’état du parc immobilier du département du Nord en nous basant sur les diagnostics de performance énergétique des logements. 
+Notre souhait initial a été d’observer l’évolution de l’activité de rénovation énergétique des logements à l’échelle des régions françaises. Mais l’absence de données libres d’accès nous a contraint à revoir notre angle. Nous avons donc fait le choix d’étudier l’état du parc immobilier du département du Nord en nous basant sur les diagnostics de performance énergétique des logements. 
 
 Tel que défini par le ministère de la Transition écologique, le DPE _“décrit le bâtiment ou le logement (surface, orientation, murs, fenêtres, matériaux, etc), ainsi que ses équipements de chauffage, de production d’eau chaude sanitaire, de refroidissement et de ventilation. Il indique, suivant les cas, soit la quantité d’énergie effectivement consommée (sur la base de factures), soit la consommation d’énergie estimée pour une utilisation standardisée du bâtiment ou du logement.”_
 
@@ -17,6 +15,7 @@ La première version de notre travail visait à étudier à l’échelle région
 
 Nous avons pour cette raison redirigé nos efforts vers un plus petit dénominateur, le département, et plus spécifiquement le département du Nord (59). Nous souhaitions, à partir de l’exploitation de données librement accessibles, entamer une réflexion sur l’état du parc immobilier du département en matière d’énergie, révéler les éventuelles disparités et comparer la consommation énergétique des logements selon les périodes.
 
+
 Afin de permettre cette analyse, plusieurs jeux de données ont dû être utilisés. Notre première source, sur laquelle repose les autres, est la base des diagnostics énergétiques des logements du Nord mise en ligne par l’ADEME. Chaque ligne correspond à un logement auquel est associé, entre autres, une adresse postale complète et l’année de construction du bâtiment évalué. Ce document était composé de près de 325 000 entrées. Toutes les informations n'étaient pas correctement remplies et un travail de nettoyage sur lequel nous revenons en annexe s’est imposé.  
 
 Un des problèmes rencontrés était la mauvaise écriture du nom des villes, certaines comportant des caractères spéciaux comme des tirés ou des espaces en trop. Nous avons corrigé ces erreurs en faisant appel à une base de données INSEE comprenant, pour chaque code INSEE, la ville qui lui est associée. Nous avons relié les bases de données entre elles à l’aide de Workbench Data afin d’obtenir une écriture standardisée des différents noms de ville pour permettre l’étude des performances énergétiques du parc de chaque ville. 
@@ -24,6 +23,7 @@ Un des problèmes rencontrés était la mauvaise écriture du nom des villes, ce
 Une démarche similaire a été réalisée à l’aide d’une base de données établie par La Poste comprenant une position géographique pour chaque ville de France. L’obtention d’une latitude et d’une longitude était une information essentielle de pouvoir situer sur la carte les lieux étudiés et réaliser une cartographie précise. 
 
 Enfin, la base de logement INSEE de 2016 nous a permis de connaître le nombre de résidences primaires et secondaires dans le département. 
+
 
 Nous l’avons vu, la base de diagnostic des bâtiments du Nord est vaste. Pour gagner en lisibilité, nous avons décidé de nous concentrer sur les bâtiments réparties en quatre périodes distinctes. La première catégorie de logements comprendra les bâtiments construits avant 1950, la seconde les bâtiments compris entre 1950 et 1980, puis ceux compris entre 1980 et 2000 et, pour la quatrième période, ceux compris entre 2000 et 2010. Nous avons décidé de ne pas prendre en compte les bâtiments construits après 2010 car les normes récentes et l’actualité de leur construction rendent quasi improbable des travaux de rénovation énergétique.  Prenons note que le département du Nord a connu de nombreuses destructions pendant la seconde guerre mondiale, impliquant un fort travail de reconstruction à la sortie de la guerre et donc un nombre plus important de logements construits durant cette période comparé à d’autres territoires. 
 
@@ -44,7 +44,6 @@ Nous pouvons notamment prendre pour exemple cette première visualisation qui pe
 C’est ici qu’intervient notre 2nd diagramme qui nous permet d’observer qu’en “volume” de logements, la part du parc immobilier construit avant 1950 et bien plus important que celui construit entre 2000 et 2010 (comme nous avons pu l’expliquer précédemment). Ce diagramme nous aide ainsi à voir qu’en réalité ce volume de logements est aussi supérieur lorsque l'on s’intéresse aux DPE vertes qui représentent 20000 logements tandis que seulement 9000 sont catégorisés de la sorte pour la période 2000-2010. 
 
 ![](4.png)
-
 
 Enfin, la visualisation Sankey-Diagram permet d’observer cette même distribution par DPE et classe d’âge de manière plus “dynamique” que les deux visualisations précédentes et inclut quant à elle les logements ou la DPE n’a pas été possible via la lettre “N” et permet ainsi de renforcer la part prépondérante que tiennent les logements construits avant 1950 dans notre visualisation. 
 
